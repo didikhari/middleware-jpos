@@ -1,0 +1,12 @@
+<channel-adaptor name='client-channel' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+
+	<channel class="org.jpos.iso.channel.ASCIIChannel" packager="org.jpos.iso.packager.ISO87APackager" logger="Q2">
+		<property name="packager-config" value="cfg/client/client-iso87ascii.xml" />
+		<property name="host" value="localhost" />
+		<property name="port" value="7080" />		
+	</channel>
+
+	<in>client-send</in>
+	<out>client-receive</out>
+	<reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
