@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<server name="test-server" class="org.jpos.q2.iso.QServer" logger="Q2">
+	<attr name="port" type="java.lang.Integer">7080</attr>
+	<channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2"
+		packager="org.jpos.iso.packager.ISO87APackager">
+	</channel>
+	<request-listener
+		class="com.codeinvocation.middleware.jpos.MiddlewareRequestListener" logger="Q2">
+	</request-listener>
+</server>
+
